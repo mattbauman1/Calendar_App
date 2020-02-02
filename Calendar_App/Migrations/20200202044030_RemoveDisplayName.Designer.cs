@@ -4,14 +4,16 @@ using Calendar_App.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Calendar_App.Migrations
 {
     [DbContext(typeof(Calendar_AppContext))]
-    partial class Calendar_AppContextModelSnapshot : ModelSnapshot
+    [Migration("20200202044030_RemoveDisplayName")]
+    partial class RemoveDisplayName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

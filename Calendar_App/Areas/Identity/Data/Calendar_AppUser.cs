@@ -9,6 +9,5 @@ namespace Calendar_App.Areas.Identity.Data
     // Add profile data for application users by adding properties to the Calendar_AppUser class
     public class Calendar_AppUser : IdentityUser
     {
-        public string FirstName { get; set; }
     }
 }
