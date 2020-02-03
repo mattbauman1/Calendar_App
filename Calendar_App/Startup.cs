@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Calendar_App.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Calendar_App
 {
@@ -31,6 +33,9 @@ namespace Calendar_App
             {
                 options.User.RequireUniqueEmail = true;
             });
+
+            services.AddDbContext<Calendar_AppDbContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("Calendar_AppDbContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
